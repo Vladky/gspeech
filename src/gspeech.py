@@ -25,7 +25,7 @@ import rospy
 from std_msgs.msg import String
 from std_msgs.msg import Int8
 import shlex,subprocess,os,sys,json
-api_key = "" # PASTE HERE YOUR GOOGLE API KEY
+api_key = "AIzaSyCguJoK2cIaotM7qcTqlgpV6QasM1bNG0s" # PASTE HERE YOUR GOOGLE API KEY
 cmd1='sox -r 44100 -t alsa default recording.flac silence 1 0.1 1% 1 1.5 1%'
 cmd2='wget -q -U "Mozilla/5.0" --post-file recording.flac --header="Content-Type: audio/x-flac; rate=44100" -O - "https://www.google.com/speech-api/v2/recognize?output=json&lang=en-us&key='+api_key+'"'
 
